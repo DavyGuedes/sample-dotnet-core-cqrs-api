@@ -17,21 +17,21 @@ pipeline{
             steps{
                 sh "ls"
                 sh "pwd"
-                sh "dotnet restore sample-dotnet-core-cqrs-api/src/SampleProject.API.sln"
+                sh "dotnet restore src/SampleProject.API.sln"
             }
         }
         stage('Clean'){
             steps{
                 sh "ls"
                 sh "pwd"
-                sh "dotnet restore sample-dotnet-core-cqrs-api/src/SampleProject.API.sln"
+                sh "dotnet restore src/SampleProject.API.sln"
             }
         }
         stage('Build'){
             steps{
                 sh "ls"
                 sh "pwd"
-                sh "dotnet build sample-dotnet-core-cqrs-api/src/SampleProject.API.sln --configuration Release"
+                sh "dotnet build src/SampleProject.API.sln --configuration Release"
             }
         }
     }
